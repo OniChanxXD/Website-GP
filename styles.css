@@ -320,13 +320,11 @@ body {
         max-width: 100%;
     }
 
-    @media print {
-        .header {
-            background-color: var(--primary-color);
-            background-image: none;
-            print-color-adjust: exact;
-            -webkit-print-color-adjust: exact;
-        }
+    .header {
+        background-color: var(--primary-color);
+        background-image: none;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
     }
 
     .section {
