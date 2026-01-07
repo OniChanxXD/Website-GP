@@ -321,7 +321,8 @@ body {
     }
 
     .header {
-        background: var(--primary-color);
+        background-color: var(--primary-color) !important;
+        background-image: none !important;
         print-color-adjust: exact;
         -webkit-print-color-adjust: exact;
     }
@@ -414,6 +415,19 @@ body {
 
 .section {
     animation: fadeIn 0.6s ease-out;
+}
+
+/* Profile placeholder styling */
+.profile-placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    font-size: 4rem;
 }
 
 /* Dark mode support (optional) */

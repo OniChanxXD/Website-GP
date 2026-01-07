@@ -23,15 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.display = 'none';
             const placeholder = document.createElement('div');
             placeholder.className = 'profile-placeholder';
-            placeholder.innerHTML = '<span style="font-size: 4rem;">👤</span>';
-            placeholder.style.width = '150px';
-            placeholder.style.height = '150px';
-            placeholder.style.borderRadius = '50%';
-            placeholder.style.display = 'flex';
-            placeholder.style.alignItems = 'center';
-            placeholder.style.justifyContent = 'center';
-            placeholder.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
-            placeholder.style.border = '5px solid rgba(255, 255, 255, 0.2)';
+            placeholder.innerHTML = '<span>👤</span>';
             this.parentNode.appendChild(placeholder);
         };
     }
@@ -114,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function getIPFSCID() {
     // Try to extract CID from URL if hosted on IPFS gateway
     const url = window.location.href;
-    const ipfsMatch = url.match(/\/ipfs\/([a-zA-Z0-9]+)/);
+    const ipfsMatch = url.match(/\/ipfs\/([a-zA-Z0-9_-]+)/);
     if (ipfsMatch) {
         return ipfsMatch[1];
     }

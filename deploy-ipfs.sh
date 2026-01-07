@@ -42,7 +42,7 @@ echo ""
 # Get the directory of this script
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Add to IPFS
+# Add to IPFS (respects .ipfsignore for exclusions)
 RESULT=$(ipfs add -r -Q "$SCRIPT_DIR" | tail -n 1)
 
 if [ -z "$RESULT" ]; then

@@ -1,3 +1,7 @@
+# Ignore deployment script
+deploy-ipfs.sh
+.last-cid
+
 # Ignore node_modules if using any npm packages
 node_modules/
 
@@ -13,6 +17,7 @@ Thumbs.db
 # Ignore git files
 .git/
 .gitignore
+.ipfsignore
 
 # Ignore editor files
 .vscode/
@@ -22,7 +27,7 @@ Thumbs.db
 *~
 
 # Ignore deployment files (optional - you may want these in IPFS)
-# DEPLOYMENT.md
+DEPLOYMENT.md
 
 # Ignore temporary files
 tmp/
