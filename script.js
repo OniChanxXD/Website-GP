@@ -106,7 +106,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function getIPFSCID() {
     // Try to extract CID from URL if hosted on IPFS gateway
     const url = window.location.href;
-    const ipfsMatch = url.match(/\/ipfs\/([a-zA-Z0-9_-]+)/);
+    // Match both CIDv0 (Qm... base58) and CIDv1 (baf... base32) formats
+    const ipfsMatch = url.match(/\/ipfs\/(Qm[a-zA-Z0-9]{44}|baf[a-z2-7A-Z0-9]+)/);
     if (ipfsMatch) {
         return ipfsMatch[1];
     }
