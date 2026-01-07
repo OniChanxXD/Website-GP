@@ -26,7 +26,10 @@ sudo apt upgrade -y
 
 ### Download and Install Kubo (go-ipfs)
 ```bash
-# Download the latest version (check https://dist.ipfs.tech/#kubo for latest)
+# Check for the latest version at: https://dist.ipfs.tech/#kubo
+# As of this writing, v0.24.0 is the latest. Update the version number as needed.
+
+# Download the latest version for ARM64
 wget https://dist.ipfs.tech/kubo/v0.24.0/kubo_v0.24.0_linux-arm64.tar.gz
 
 # Extract

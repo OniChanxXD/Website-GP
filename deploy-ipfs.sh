@@ -28,7 +28,20 @@ if ! ipfs swarm peers &> /dev/null; then
     ipfs daemon &
     DAEMON_PID=$!
     echo "Waiting for daemon to start..."
-    sleep 5
+    
+    # Wait for daemon to be ready (max 30 seconds)
+    WAIT_COUNT=0
+    while ! ipfs swarm peers &> /dev/null && [ $WAIT_COUNT -lt 30 ]; do
+        sleep 1
+        WAIT_COUNT=$((WAIT_COUNT + 1))
+    done
+    
+    if [ $WAIT_COUNT -ge 30 ]; then
+        echo "❌ IPFS daemon failed to start within 30 seconds"
+        exit 1
+    fi
+    
+    echo "✅ IPFS daemon started successfully"
     STARTED_DAEMON=true
 else
     echo "✅ IPFS daemon is running"
