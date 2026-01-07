@@ -1,0 +1,39 @@
+# Ignore node_modules if using any npm packages
+node_modules/
+
+# Ignore build artifacts
+dist/
+build/
+*.log
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore git files
+.git/
+.gitignore
+
+# Ignore editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ignore deployment files (optional - you may want these in IPFS)
+# DEPLOYMENT.md
+
+# Ignore temporary files
+tmp/
+temp/
+*.tmp
+
+# Ignore environment files with secrets
+.env
+.env.local
+.env.production
+
+# Ignore cache
+.cache/
+*.cache
