@@ -308,6 +308,21 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'ArrowLeft') show(index - 1);
             if (e.key === 'ArrowRight') show(index + 1);
         });
+
+        // touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        container.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, false);
+        container.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) show(index + 1); // swipe left → next
+                else show(index - 1); // swipe right → prev
+            }
+        }, false);
     });
 
     // Hook up test-section buttons
