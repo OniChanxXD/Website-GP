@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+
+# Optimized images (generated)
+images/optimized/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+package-lock.json
+
+# IDE
+.vscode/
