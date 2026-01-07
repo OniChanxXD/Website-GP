@@ -1,0 +1,14 @@
+{
+  "name": "gaurav-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website — image optimization script included",
+  "scripts": {
+    "optimize-images": "node scripts/optimize-images.js",
+    "rewrite-images": "node scripts/rewrite-images.js",
+    "optimize-and-rewrite": "npm run optimize-images && npm run rewrite-images"
+  },
+  "dependencies": {
+    "sharp": "^0.32.0",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}
